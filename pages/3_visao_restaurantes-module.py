@@ -121,20 +121,12 @@ st.sidebar.markdown('### O melhor da região!')
 st.sidebar.markdown("""---""")
 
 st.sidebar.markdown('## Selecione uma data limite')
-st.sidebar.markdown('## Selecione uma data limite')
-value = pd.to_datetime("2022-04-13", errors='coerce')
-value_timestamp = value.timestamp()
-
-# Configurar o slider com o valor convertido
 date_slider = st.sidebar.slider(
     'Até qual valor?',
-    min_value=pd.to_datetime("2022-02-11", errors='coerce').timestamp(),
-    max_value=pd.to_datetime("2022-04-06", errors='coerce').timestamp(),
-    value=value_timestamp
-)
-
-# Converter o valor do slider de volta para um objeto pandas.Timestamp
-selected_date = pd.to_datetime(date_slider, unit='s')
+    value=pd.to_datetime(2022, 4, 13),
+    min_value=pd.to_datetime(2022, 2, 11),
+    max_value=pd.to_datetime(2022, 4, 6),
+    format='DD-MM-YYYY')
 
 
 st.sidebar.markdown("""---""")
