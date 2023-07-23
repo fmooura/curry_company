@@ -129,7 +129,7 @@ date_slider = st.sidebar.slider(
     max_value=pd.to_datetime("2022-04-06", errors='coerce').timestamp(),
     value=value=value_timestamp,
     format='DD-MM-YYYY')
-selected_date = pd.to_datetime(date_slider, unit='s')
+    selected_date = pd.to_datetime(date_slider, unit='s')
 
 
 st.sidebar.markdown("""---""")
